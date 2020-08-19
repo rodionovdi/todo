@@ -1,0 +1,56 @@
+// breakpoints
+    // Small tablets and large smartphones (landscape view)
+    $screen-sm-min: 576px;
+    // Small tablets (portrait view)
+    $screen-md-min: 768px;
+    // Tablets and small desktops
+    $screen-lg-min: 992px;
+    // Large tablets and desktops
+    $screen-xl-min: 1200px;
+    // Small devices
+    @mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+    }
+    // Medium devices
+    @mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+    }
+    // Large devices
+    @mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+    }
+    // Extra large devices
+    @mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+    }
+    // Custom devices
+    @mixin rwd($screen) {
+    @media (min-width: $screen+'px') {
+        @content;
+    }
+    }
+// Colors
+    $text: #fff;
+    $primary:#5b3cc4;
+    $success: rgb(23, 201, 100);
+    $danger:rgb(242, 19, 93);
+    $warning:rgb(255, 130, 0);
+    $dark:rgb(36, 33, 69);
+    $gr: rgb(111,100,223);
+    $soft:#E57470;
+    $gr-main: linear-gradient(50deg, #6E60DA 0%, rgba(105,163,236,1) 62%, rgba(104,169,237,1) 100%);
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+html{
+    font-family: 'Roboto', sans-serif;
+    color: #636363;
+    font-size: 1.2rem;
+}
